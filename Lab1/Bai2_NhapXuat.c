@@ -9,13 +9,13 @@ int main() {
     float diem_tb;
 
     // 1. Nhập dữ liệu từ bàn phím
-    printf("Nhập Mã số sinh viên: ");
+    printf("Nhap ma so sinh vien: ");
     scanf("%19s", mssv); 
     
     // Xóa bộ nhớ đệm để tránh lỗi khi nhập chuỗi có khoảng trắng tiếp theo
     while (getchar() != '\n'); 
 
-    printf("Nhập Họ và Tên: ");
+    printf("Nhap Ho va Ten: ");
     fgets(ho_ten, sizeof(ho_ten), stdin);
     
     // Loại bỏ ký tự xuống dòng '\n' do fgets tự động thêm vào cuối chuỗi
@@ -26,17 +26,17 @@ int main() {
         }
     }
 
-    printf("Nhập Năm sinh: ");
+    printf("Nhap nam sinh: ");
     scanf("%d", &nam_sinh);
 
-    printf("Nhập Điểm trung bình: ");
+    printf("Nhap diem trung binh: ");
     scanf("%f", &diem_tb);
 
     // 2. Tự động tính toán số tuổi (Cố định năm 2026)
     tuoi = 2026 - nam_sinh;
 
     // 3. Xuất kết quả theo định dạng yêu cầu
-    printf("\n--- THÔNG TIN SINH VIÊN ---\n");
+    printf("\n--- THONG TIN SINH VIEN ---\n");
     printf("Ma so sinh vien: %s\n", mssv);
     printf("Ho Va Ten: %s\n", ho_ten);
     printf("Nam sinh: %d\n", nam_sinh);
